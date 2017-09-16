@@ -3,10 +3,10 @@ This project is just the readme on how to run higher spark version on cluster wi
 
 # Command to execute higher Apache spark version on cluster with Lower Spark version 
 
-In this example we have hortoworks cluster with Apache spark 1.5 version however we had a requirement to use 
+In this example we have hortonworks cluster with Apache spark 1.5 version however we had a requirement to use 
 Apache Spark version 1.6 due to new functionalities in the same .
 
-please follwow below command this command should be executed with the machine having access to cluster 
+please follwow below command, this command should be executed with the machine having access to cluster may be ideally edge node
 
 spark-submit --master yarn_cluster --driver-class-path spark-assembly-1.6.0-hadoop2.6.0.jar --conf spark.executor.userClassPathFirst=true --conf spark.executor.extraClassPath=tmp/spark-assembly-1.6.0-hadoop2.6.0.jar --class com.foo.Main target/scala-2.10/com.foo.application.jar
 
